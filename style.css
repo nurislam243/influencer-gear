@@ -71,5 +71,23 @@
 }
 /* responsive for mobile diveces */
 @media screen and (max-width: 576px){
+    .navbar{
+        padding: 0 30px;
+        align-items: center;
+    }
+    .navbar, .navbar ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner-content{
+        text-align: center;
+    }
+    .banner-description{
+        margin-right: auto;
+    }
+
     
 }
