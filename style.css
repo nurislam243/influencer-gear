@@ -51,6 +51,25 @@
 .banner-title{
     font-size: 3.25rem;
 }
+.banner-description{
+    font-weight: 600;
+    margin-right: 80px;
+}
 .banner-btn{
     border-radius: 41px;
+}
+.banner-img{
+    background-image: url("./images/Circle\ design.svg");
+    width: 470px;
+    height: 470px;
+
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+/* responsive for mobile diveces */
+@media screen and (max-width: 576px){
+    
 }
