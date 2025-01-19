@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     font-family: "Poppins", serif;
 }
@@ -39,6 +41,9 @@
     font-weight: 600;
 
 }
+.cart{
+    font-size: 25px;
+}
 /* banner styles */
 .banner{
     display: flex;
@@ -69,7 +74,92 @@
     align-items: center;
     margin-top: 30px;
 }
-/* responsive for mobile diveces */
+/* main section styles start here */
+.company{
+    max-width: 1240px;
+    border-top: 1px solid rgb(238,242,246);
+    border-bottom: 1px solid rgb(238,242,246);
+    margin: 50px auto 50px auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.company img{
+    margin: 35px 30px;
+    height: auto;
+    max-width: 100px;
+    max-height: 50px;
+}
+/* collection styles */
+.collection{
+    max-width: 1170px;
+    text-align: center;
+    margin: 50px auto;
+}
+.collection-title{
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: #3A3A3A;
+    line-height: 70px;
+}
+.card-section{
+    display: grid;
+    row-gap: 40px;
+    column-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.card{
+    max-width: 350px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+.card img{
+   margin-top: 17px;
+}
+.card-content{
+    max-width: 300px;
+    text-align: left;
+    margin: auto;
+}
+.card-title{
+    line-height: 40px;
+    font-weight: 500;
+    font-size: 1.75rem;
+    color: #18191F;
+}
+.price{
+    font-family: "Inter", serif;
+    line-height: 150%;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.87);
+}
+.star{
+    width: 16px;
+    height: 16px;
+}
+.rating-point{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 22px;
+    letter-spacing: o.1px;
+    color: #5E6366;
+}
+.shifting, .available, .protection{
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 143%;
+    letter-spacing: 1.8%;
+    color: #787885;
+}
+.checked{
+    color: orange;
+}
+/* responsive for small diveces */
 @media screen and (max-width: 576px){
     .navbar{
         padding: 0 30px;
@@ -78,6 +168,12 @@
     .navbar, .navbar ul{
         flex-direction: column;
         text-align: center;
+    }
+    .navbar li{
+        margin-top: 20px;
+    }
+    .navbar a{
+        font-size:1.2rem;
     }
     .banner{
         flex-direction: column-reverse;
@@ -88,6 +184,29 @@
     .banner-description{
         margin-right: auto;
     }
-
-    
+    .card-section{
+        grid-template-columns: repeat(1, 1fr);
+    } 
+}
+/* responsive for mediam devices */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar ul{
+        justify-content: space-around;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner-content{
+        text-align: center;
+    }
+    .banner-description{
+        margin-right: auto;
+    } 
+    .card-section{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
