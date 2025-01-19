@@ -12,6 +12,7 @@
     background-color: #E02C6D;
     border: none;
     padding: 10px 24px;
+    font-weight: bold;
     
 }
 
@@ -110,13 +111,14 @@
     grid-template-columns: repeat(3, 1fr);
 }
 .card{
-    max-width: 350px;
+    max-width: auto;
     border-radius: 5px;
     background-color: #FFFFFF;
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
 }
 .card img{
    margin-top: 17px;
+   width: auto;
 }
 .card-content{
     max-width: 300px;
@@ -159,6 +161,58 @@
 .checked{
     color: orange;
 }
+.see-more{
+    color: rgba(224, 44, 109, 0.87);
+    text-align: right;
+    font-weight: bold;
+    line-height: auto;
+}
+.featured-section{
+    max-width: 1240px;
+    display: flex;
+    gap: 170px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.featured-title{
+    font-weight: bold;
+    line-height: 60px;
+    font-size: 2.375rem;
+    color: #0A0826;
+}
+.featured-description{
+    margin-right: 140px;
+    color: #6C6C6C;
+    font-weight: bold;
+    line-height: 28px;
+}
+/* footer styles start here */
+.footer-section{
+    background-color: rgb(10,8,38);
+    width: 100%;
+    padding-top: 30px;
+    height: 30vh;
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.footer-title{
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: auto;
+    margin-bottom: 0px;
+}
+.social-logo i{
+    margin: 0px 8px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgb(34,33,60);
+    text-align: center;
+    padding: 3px;
+}
+
 /* responsive for small diveces */
 @media screen and (max-width: 576px){
     .navbar{
@@ -184,9 +238,29 @@
     .banner-description{
         margin-right: auto;
     }
+    .collection{
+        width: calc(100% - 30px);
+    }
     .card-section{
         grid-template-columns: repeat(1, 1fr);
-    } 
+        width: 100%;
+    }
+    .card{
+        width: 100%;
+    }
+    .card-section img, .card-content{
+        width: calc(100%-30px);
+    }
+    .featured-section{
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .featured-content{
+        text-align: center;
+    }
+    .featured-description{
+        margin-right: auto;
+    }
 }
 /* responsive for mediam devices */
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -206,7 +280,27 @@
     .banner-description{
         margin-right: auto;
     } 
+    .collection{
+        width: calc(100% - 30px);
+    }
     .card-section{
         grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    .card{
+        width: 100%;
+    }
+    .card-section img, .card-content{
+        width: calc(100%-30px);
+    }
+    .featured-section{
+        gap: 10px;
+        margin: ;
+    }
+    .featured-content, .featured-img{
+        width: 47%;
+    }
+    .featured-description{
+        margin: auto;
     }
 }
